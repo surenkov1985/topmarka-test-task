@@ -1,0 +1,86 @@
+.head {
+    width: 100%;
+    max-width: 1504px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    &__navigation {
+        padding: 40px 65px 30px;
+        width: calc((740 / 1505) * 100%);
+        margin-left: 40px;
+        background: rgba(0, 0, 0, 0.36);
+        backdrop-filter: blur(26.5px);
+        border-radius: 0px 0px 15px 15px;
+
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_item {
+            padding: 0 10px;
+            text-align: center;
+            cursor: pointer;
+            padding: 0 15px;
+
+            &:nth-child(2) {
+                margin-left: 15px;
+            }
+
+            &:nth-child(3) {
+                margin-left: 5px;
+            }
+
+            & a {
+                color: #FFFFFF;
+                font-family: $ContentFont;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 31px;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+
+        &_phone {
+            font-family: $ContentFont;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 36px;
+            font-variant: lining-nums;
+            
+        }
+        &_addr {
+            font-family: $ContentFont;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 6px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.logo {
+    margin-top: 9px;
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: $LogoFont;
+        color: rgba(#FFFFFF, 0.8);
+        letter-spacing: 0.175em;
+        margin-top: 10px;
+    }
+}

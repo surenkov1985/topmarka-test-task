@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Light'), local('Mont-Light'),
+        url('Mont-Light.woff2') format('woff2'),
+        url('Mont-Light.woff') format('woff'),
+        url('Mont-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
