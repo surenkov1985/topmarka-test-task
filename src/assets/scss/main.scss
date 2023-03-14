@@ -5,6 +5,9 @@
 @import "./blocks/header.scss";
 @import "./blocks/programms.scss";
 @import "./blocks/masters.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/footer.scss";
 
 @import "./mixins/grid-mixin.scss";
 
@@ -19,6 +22,7 @@ html {
 
 body {
     width: 100%;
+    min-width: 320px;
     height: 100%;
     min-height: 100vh;
     background: #0C0C0D;
@@ -31,6 +35,7 @@ body {
     flex-direction: column;
     max-width: 1504px;
 }
+
 .content {
     width: 100%;
     height: 100%;
@@ -39,6 +44,15 @@ body {
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: 1200px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: 768px) {
+        min-height: 769px;
+        padding: 0 33px;
+    }
+
     &-title {
         font-family: $ContentFont;
         font-weight: 500;
@@ -46,5 +60,21 @@ body {
         line-height: 100%;
         text-align: center;
         color: #FBDAA8;
+
+        @media (max-width: 1250px) {
+            font-size: 56px;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 46px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 32px;
+        }
     }
 }

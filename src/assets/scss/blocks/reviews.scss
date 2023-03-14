@@ -1,0 +1,97 @@
+.reviews {
+    width: 100%;
+    padding: 58px 0px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 550px) {
+        padding: 43px 0 47px;
+    }
+
+    &__content {
+        margin-top: 80px;
+        width: 100%;
+        overflow: hidden;
+
+        @media (max-width: 550px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 24px 39px;
+        border: 1px solid #FBDAA8;
+        border-radius: 15px;
+
+        &_row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    }
+
+    &__name {
+        font-family: $ContentFont;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 100%;
+        color: #FFFFFF;
+        transition: all 0.3s;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+
+        &_num {
+            font-family: $ParagraphFont;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 114.8%;
+            color: #FFFFFF;
+            font-variant: lining-nums;
+        }
+
+        &_stars {
+            display: flex;
+            column-gap: 4px;
+        }
+    }
+
+    &__age {
+        font-family: $ParagraphFont;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 114.8%;
+        color: #FFFFFF;
+        font-variant: lining-nums;
+        margin-top: 8px;
+    }
+
+    &__text {
+        font-family: $ParagraphFont;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 114.8%;
+        color: #FFFFFF;
+        font-variant: lining-nums;
+        margin-top: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+}
