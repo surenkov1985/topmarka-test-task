@@ -1,74 +1,82 @@
-@import "../mixins/grid-mixin.scss";
-
-.programms {
+.masters {
     width: 100%;
-    padding: 8px 20px 69px;
+    padding: 68px 20px 50px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &__title {
-        font-family: $ContentFont;
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 100%;
-        text-align: center;
-        color: #FBDAA8;
-    }
-
     &__cards {
-        @include grid-container(58px, 58px);
+        @include grid-container(82px, 58px);
         width: 100%;
         position: relative;
-        margin-top: 80px;
+        margin-top: 78px;
         z-index: 1;
-
-        &_bg-effect {
-            position: absolute;
-            top: 40%;
-            width: 110%;
-            height: 620px;
-            background: rgba(255, 158, 68, 0.15);
-            filter: blur(100px);
-            z-index: 0;
-            border-radius: 50%;
-        }
     }
 
-    .card {
+    & .card {
         position: relative;
         border-radius: 14px;
-        overflow: hidden;
-        min-height: 620px;
+        min-height: 490px;
         z-index: 5;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
+        padding: 2px;
+        background: #D8A65D;
+        background-position: 90% 90%;
+        background: linear-gradient(180deg, rgba(#D8A65D, 0) 88%, rgba(#D8A65D, 1) 100%);
+        transition: all 1s;
+
+        &::before {
+            content: url("../images/heart-icon.svg");
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+        }
+
+        @keyframes gradient {
+            0% {
+
+                background-position: 0 90%;
+            }
+
+            100% {
+                // background: linear-gradient(180deg, rgba(#D8A65D, 0) 0%, rgba(#D8A65D, 1) 1%);
+                background-position: 0 0;
+                box-shadow: 0px 0px 30px rgba(255, 158, 68, 0.3)
+            }
+        }
 
         &:hover {
-            & img {
-                transform: scale(1.05);
-            }
+            background: #D8A65D;
+            // & img {
+            //     transform: scale(1.05);
+            // }
+            // background: linear-gradient(0deg, rgba(#D8A65D, 1) 100%, rgba(#D8A65D, 0) 0%);
+            animation: gradient 0.3s 1 forwards;
         }
 
         & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
             border-radius: 15px;
             transition: all 0.3s;
         }
 
         &__content {
             position: absolute;
-            top: 0;
+            top: 2px;
             z-index: 10;
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-radius: 15px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
-            padding: 28px;
+            padding: 50px 37px 27px 22px;
         }
 
         &__title {
@@ -89,6 +97,7 @@
             color: #FFFFFF;
             margin-bottom: 30px;
             transition: all 0.3s;
+            font-variant: lining-nums;
         }
 
         &__price {

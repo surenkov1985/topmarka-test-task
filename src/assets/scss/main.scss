@@ -4,6 +4,9 @@
 @import "./blocks/intro.scss";
 @import "./blocks/header.scss";
 @import "./blocks/programms.scss";
+@import "./blocks/masters.scss";
+
+@import "./mixins/grid-mixin.scss";
 
 * {
     margin: 0;
@@ -35,4 +38,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &-title {
+        font-family: $ContentFont;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 100%;
+        text-align: center;
+        color: #FBDAA8;
+    }
 }
