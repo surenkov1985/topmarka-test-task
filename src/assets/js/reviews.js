@@ -1,5 +1,4 @@
 import Swiper from "swiper";
-import "swiper/swiper-bundle.min.css";
 
 const reviewsSlider = new Swiper(".reviews__content", {
 	loop: true,
