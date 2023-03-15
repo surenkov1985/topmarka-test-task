@@ -13,7 +13,7 @@ ymaps.ready(function () {
 		},
 		{
 			iconLayout: "default#image",
-			iconImageHref: "assets/images/mark.png",
+			iconImageHref: "../static/mark.png",
 			iconImageSize: [54, 60],
 			iconImageOffset: [-27, -30],
 		}

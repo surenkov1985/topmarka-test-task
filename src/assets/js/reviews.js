@@ -1,5 +1,50 @@
 import Swiper from "swiper";
 
+const reviews = document.querySelectorAll(".reviews__card");
+const fullReview = document.querySelector(".review");
+const reviewCloseBtn = fullReview.querySelector(".review__close_btn");
+const fullReviewName = fullReview.querySelector(".review__name");
+const fullReviewAge = fullReview.querySelector(".review__age");
+const fullReviewText = fullReview.querySelector(".review__text");
+const fullReviewRating = fullReview.querySelector(".review__rating")
+
+
+for (let card of reviews) {
+	card.addEventListener("click", function (e) {
+		const name = card.querySelector(".reviews__name").textContent
+		const age = card.querySelector(".reviews__age").textContent;
+		const text = card.querySelector(".reviews__text").textContent;
+		const rating = card.querySelector(".reviews__rating").innerHTML;
+		console.log(rating);
+
+		fullReviewName.innerHTML = name;
+		fullReviewAge.innerHTML = age
+		fullReviewText.innerHTML = text;
+		fullReviewRating.innerHTML = rating;
+
+		fullReview.classList.add("active")
+	});
+}
+reviewCloseBtn.addEventListener("click", function(e) {
+	
+		closeReview()
+	
+})
+
+fullReview.addEventListener("click", function (e) {
+	if (e.target === fullReview) {
+		closeReview();
+	}
+});
+
+function closeReview() {
+	fullReview.classList.remove("active");
+	fullReviewName.innerHTML = "";
+	fullReviewAge.innerHTML = "";
+	fullReviewText.innerHTML = "";
+	fullReviewRating.innerHTML = "";
+}
+
 const reviewsSlider = new Swiper(".reviews__content", {
 	loop: true,
 	direction: "horizontal",
