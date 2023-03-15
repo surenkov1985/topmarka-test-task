@@ -14,6 +14,7 @@ const inputEvents = ["input", "keydown", "blur"];
 
 reserveBtn.addEventListener("click", function () {
 	formBg.classList.add("active");
+    document.body.style.overflow = "hidden";
 });
 
 formBg.addEventListener("click", function (e) {
@@ -177,6 +178,7 @@ function closeForm() {
 
 	contactsForm.style.display = "flex";
 	resultBlock.style.display = "none";
+    document.body.style.overflow = "inherit";
 }
 
 function testValue(elem, reg, string) {

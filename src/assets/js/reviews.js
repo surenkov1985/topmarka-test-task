@@ -23,6 +23,7 @@ for (let card of reviews) {
 		fullReviewRating.innerHTML = rating;
 
 		fullReview.classList.add("active")
+		document.body.style.overflow = "hidden";
 	});
 }
 reviewCloseBtn.addEventListener("click", function(e) {
@@ -43,6 +44,7 @@ function closeReview() {
 	fullReviewAge.innerHTML = "";
 	fullReviewText.innerHTML = "";
 	fullReviewRating.innerHTML = "";
+	document.body.style.overflow = "inherit";
 }
 
 const reviewsSlider = new Swiper(".reviews__content", {

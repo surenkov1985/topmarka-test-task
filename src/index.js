@@ -8,3 +8,4 @@ import "./assets/js/reviews";
 import "./assets/js/map";
 import "./assets/js/mobileMenu";
 import "./assets/js/contactsForm";
+import "./assets/js/scroll"
