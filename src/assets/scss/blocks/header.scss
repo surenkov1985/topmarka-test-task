@@ -14,7 +14,11 @@
 
     @media (max-width: 768px) {
         padding: 0 30px;
-        background: rgba(0, 0, 0, 0.36);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 400px) {
+        padding: 0px 20px 10px;
     }
 
     & .container {
@@ -86,6 +90,11 @@
 
                 @media (max-width: 1250px) {
                     font-size: 18px;
+                }
+
+                &:hover {
+                    text-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
+                    backdrop-filter: blur(24.5px);
                 }
             }
         }

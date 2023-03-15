@@ -34,6 +34,10 @@
         background: linear-gradient(180deg, rgba(#D8A65D, 0) 88%, rgba(#D8A65D, 1) 100%);
         transition: all 0.5s;
 
+        @media (max-width: 550px) {
+            min-height: 340px;
+        }
+
         &::before {
             content: url("../images/heart-icon.svg");
             position: absolute;
@@ -81,6 +85,10 @@
             border-radius: 15px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
             padding: 50px 37px 27px 22px;
+
+            @media (max-width: 550px) {
+                padding: 30px 30px 27px 20px;
+            }
         }
 
         &__title {
@@ -91,6 +99,10 @@
             color: #FFFFFF;
             margin-bottom: 25px;
             transition: all 0.3s;
+
+            @media (max-width: 550px) {
+                font-size: 24px;
+            }
         }
 
         &__description {
@@ -102,6 +114,10 @@
             margin-bottom: 30px;
             transition: all 0.3s;
             font-variant: lining-nums;
+
+            @media (max-width: 550px) {
+                font-size: 16px;
+            }
         }
 
         &__price {

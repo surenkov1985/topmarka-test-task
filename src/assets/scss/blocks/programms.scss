@@ -53,6 +53,10 @@
         z-index: 5;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
 
+        @media (max-width: 400px) {
+            min-height: 530px;
+        }
+
         &:hover {
             & img {
                 transform: scale(1.05);
@@ -78,6 +82,10 @@
             justify-content: flex-end;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
             padding: 28px;
+
+            @media (max-width: 400px) {
+                padding: 20px;
+            }
         }
 
         &__title {
@@ -88,6 +96,11 @@
             color: #FFFFFF;
             margin-bottom: 25px;
             transition: all 0.3s;
+
+            @media (max-width: 400px) {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
         }
 
         &__description {
@@ -98,6 +111,11 @@
             color: #FFFFFF;
             margin-bottom: 30px;
             transition: all 0.3s;
+
+            @media (max-width: 400px) {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
         }
 
         &__price {
@@ -111,6 +129,16 @@
             color: #FBDAA8;
             opacity: 0.9;
             margin-bottom: 39px;
+
+            @media (max-width: 400px) {
+                font-size: 24px;
+                line-height: 26px;
+                margin-bottom: 25px;
+
+                & svg {
+                    width: 22px;
+                }
+            }
 
             @media (max-width: 768px) {
                 flex-direction: column;
@@ -142,6 +170,14 @@
                 align-items: center;
                 column-gap: 10px;
                 transition: all 0.3s;
+
+                @media (max-width: 400px) {
+                    font-size: 16px;
+
+                    & svg {
+                        width: 42px;
+                    }
+                }
 
                 & svg {
 

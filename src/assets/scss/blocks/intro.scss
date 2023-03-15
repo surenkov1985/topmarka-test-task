@@ -19,7 +19,11 @@
 
     @media (max-width: 768px) {
         min-height: 769px;
-        padding: 0 30px;
+        padding: 0 33px;
+    }
+    @media (max-width: 400px) {
+        min-height: 690px;
+        padding: 0 20px;
     }
 
     & .container {
@@ -69,6 +73,9 @@
             @media (max-width: 550px) {
                 font-size: 40px;
             }
+            @media (max-width: 400px) {
+                font-size: 36px;
+            }
         }
 
         &_text {
@@ -98,6 +105,10 @@
                 font-size: 24px;
 
             }
+
+            @media (max-width: 400px) {
+                font-size: 22px;
+            }
         }
 
         &_btn {
@@ -126,7 +137,6 @@
                 font-size: 14px;
                 line-height: 18px;
                 margin-top: 83px;
-
             }
         }
     }
