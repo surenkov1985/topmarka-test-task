@@ -117,8 +117,6 @@
             padding: 22px 42px;
             background: rgba(#000000, 0.5);
             border: 2px solid #D8A65D;
-            box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
-            backdrop-filter: blur(24.5px);
             border-radius: 30px;
             font-weight: 700;
             font-size: 18px;
@@ -127,6 +125,14 @@
             letter-spacing: 0.02em;
             color: rgba(#FBDAA8, 0.9);
             cursor: pointer;
+            transition: all 0.25s;
+
+            &:hover {
+                box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
+                backdrop-filter: blur(24.5px);
+                background: rgba(#000000, 0.1);
+                color: #D8A65D;
+            }
 
             @media (max-width: 768px) {
                 font-size: 16px;

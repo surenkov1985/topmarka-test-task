@@ -1,5 +1,3 @@
-
-
 ymaps.ready(function () {
 	let map = new ymaps.Map("map", {
 		center: [56.305625131939365, 43.991352285157454],
@@ -22,17 +20,17 @@ ymaps.ready(function () {
 	);
 	map.geoObjects.add(Placemark);
 
-    const centerCoord = map.getGlobalPixelCenter()
-    
-    if(window.innerWidth > 1200) {
-        centerCoord[0] -= 150
-        centerCoord[1] += 50
-    } else if (window.innerWidth > 991) {
-        centerCoord[0] -= 0;
+	const centerCoord = map.getGlobalPixelCenter();
+
+	if (window.innerWidth > 1200) {
+		centerCoord[0] -= 150;
+		centerCoord[1] += 50;
+	} else if (window.innerWidth > 991) {
+		centerCoord[0] -= 0;
 		centerCoord[1] += 0;
 	} else {
 		centerCoord[0] -= 50;
 		centerCoord[1] += 50;
-	} 
-    map.setGlobalPixelCenter(centerCoord)
+	}
+	map.setGlobalPixelCenter(centerCoord);
 });

@@ -11,6 +11,8 @@
 @import "./blocks/reviews.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/mobile.scss";
 
 @import "./mixins/grid-mixin.scss";
 
@@ -29,6 +31,7 @@ body {
     height: 100%;
     min-height: 100vh;
     background: #0C0C0D;
+    overflow-x: hidden;
 }
 
 .container {

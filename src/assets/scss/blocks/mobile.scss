@@ -1,0 +1,201 @@
+.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    background: rgba(#000000, 0);
+    display: none;
+
+    &.active {
+        display: block;
+        animation: showBg 0.3s 1 forwards;
+
+        & .mobile__bg {
+            animation: showMenu 0.3s 1 forwards;
+        }
+    }
+
+    &__bg {
+        width: 85%;
+        top: 0;
+        left: -100%;
+        max-width: 450px;
+        height: 100%;
+        background: #0C0C0D;
+        position: absolute;
+    }
+
+    &__menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        & .logo {
+            width: 173px;
+
+            &__text {
+                font-size: 12px;
+                letter-spacing: 0.12rem;
+            }
+        }
+    }
+
+    &__logo {
+        padding: 40px 20px;
+        display: flex;
+    }
+
+    &__navigation {
+        width: 100%;
+        margin-bottom: auto;
+        margin-top: 30px;
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 10px;
+            padding: 10px;
+        }
+
+        &_item {
+            width: 100%;
+            padding: 10px 10px;
+            cursor: pointer;
+            transition: all 0.25s;
+            border-radius: 8px;
+
+            &:hover {
+                box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
+                backdrop-filter: blur(24.5px);
+                background: #D8A65D;
+            }
+
+            & a {
+                color: #FFFFFF;
+                font-family: $ContentFont;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 31px;
+                transition: all 0.3s;
+                position: relative;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        padding: 30px 20px;
+
+        &_phone {
+            font-family: $ContentFont;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 36px;
+            font-variant: lining-nums;
+            transition: all 0.3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: #D8A65D;
+            }
+
+        }
+
+        &_addr {
+            font-family: $ContentFont;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 6px;
+            margin-right: 6px;
+            transition: all 0.3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: #D8A65D;
+            }
+        }
+    }
+
+    &__socials {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        &_item {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #3F3B36;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s;
+
+            & svg {
+                width: 23px;
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 7px rgba(255, 158, 68, 0.3);
+                background: darken(#3F3B36, 3%);
+            }
+        }
+    }
+
+    &__close_btn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        z-index: 50;
+
+        & svg path {
+            transition: stroke 0.25s;
+        }
+
+        &:hover {
+            & svg path {
+                stroke: #D8A65D;
+            }
+        }
+    }
+}
+
+@keyframes showBg {
+    from {
+        background: rgba(#000000, 0);
+    }
+
+    to {
+        background: rgba(#000000, 0.5);
+    }
+}
+
+@keyframes showMenu {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
