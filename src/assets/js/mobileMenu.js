@@ -22,5 +22,6 @@ mobileBg.addEventListener("click", function (e) {
 for (let link of links) {
 	link.addEventListener("click", function (e) {
 		mobileBg.classList.remove("active");
+        document.body.style.overflow = "inherit";
 	});
 }
