@@ -12,10 +12,14 @@ const errors = document.querySelectorAll(".err");
 
 const inputEvents = ["input", "keydown", "blur"];
 
+// включение формы
+
 reserveBtn.addEventListener("click", function () {
 	formBg.classList.add("active");
-    document.body.style.overflow = "hidden";
+	document.body.style.overflow = "hidden";
 });
+
+// отключение формы
 
 formBg.addEventListener("click", function (e) {
 	if (e.target === formBg) closeForm();
@@ -28,6 +32,8 @@ closeBtn.addEventListener("click", function () {
 resultBtn.addEventListener("click", function () {
 	closeForm();
 });
+
+// отправка формы
 
 contactsForm.addEventListener("submit", function (e) {
 	e.preventDefault();
@@ -58,6 +64,8 @@ contactsForm.addEventListener("submit", function (e) {
 });
 
 inputEvents.forEach((event) => {
+	// валидация поля имя
+
 	nameInput.addEventListener(event, function (e) {
 		let key = e.key;
 		let str = e.target.value;
@@ -83,6 +91,8 @@ inputEvents.forEach((event) => {
 			}
 		}
 	});
+
+	// валидация телефона, маска телефона
 
 	phoneInput.addEventListener(event, function (e) {
 		let key = e.key;
@@ -165,21 +175,7 @@ inputEvents.forEach((event) => {
 	});
 });
 
-function closeForm() {
-	formBg.classList.remove("active");
-	for (let error of errors) {
-		error.innerHTML = "";
-	}
-	for (let input of inputsList) {
-		input.value = "";
-		input.dataset.test = "false";
-		input.classList.remove("error");
-	}
-
-	contactsForm.style.display = "flex";
-	resultBlock.style.display = "none";
-    document.body.style.overflow = "inherit";
-}
+// функции валидации инпутов
 
 function testValue(elem, reg, string) {
 	if (elem.dataset.reg === "true") {
@@ -206,4 +202,22 @@ function formatValueInput(elem, regexp) {
 	let str = elem.value.replace(regexp, "");
 
 	return str;
+}
+
+// выключение формы
+
+function closeForm() {
+	formBg.classList.remove("active");
+	for (let error of errors) {
+		error.innerHTML = "";
+	}
+	for (let input of inputsList) {
+		input.value = "";
+		input.dataset.test = "false";
+		input.classList.remove("error");
+	}
+
+	contactsForm.style.display = "flex";
+	resultBlock.style.display = "none";
+	document.body.style.overflow = "inherit";
 }

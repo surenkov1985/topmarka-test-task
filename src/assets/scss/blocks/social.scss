@@ -5,7 +5,7 @@
         top: 50%;
         transform: translateY(-50%);
         display: flex;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba($DarkColor, 0.35);
         backdrop-filter: blur(30px);
         border-radius: 15px;
         padding: 19px 12px;
@@ -14,15 +14,17 @@
         align-items: center;
         row-gap: 10px;
         z-index: 30;
-        transition: all 0.35s;
 
         @media (max-width: 991px) {
             right: 50px;
         }
 
         @media (max-width: 768px) {
-            right: 0;
-            left: 102%;
+            right: 30px;
+        }
+
+        @media (max-width: 400px) {
+            right: 20px;
         }
     }
 
@@ -35,27 +37,27 @@
         justify-content: center;
 
         &:not(:first-child) {
-            background: #D8A65D;
+            background: $LinkColor;
 
             & svg {
                 width: 23px;
 
                 & path {
-                    fill: #0C0C0D;
+                    fill: $BgColor;
                 }
             }
         }
 
         &:hover {
             &:not(:first-child) {
-                background: lighten(#D8A65D, 10%);
+                background: lighten($LinkColor, 10%);
             }
 
             &:first-child {
                 & svg {
 
                     & path {
-                        fill: lighten(#D8A65D, 10%);
+                        fill: lighten($LinkColor, 10%);
                     }
                 }
             }

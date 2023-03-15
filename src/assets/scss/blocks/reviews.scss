@@ -33,7 +33,7 @@
         display: flex;
         flex-direction: column;
         padding: 24px 24px 39px;
-        border: 1px solid #FBDAA8;
+        border: 1px solid $PriceColor;
         border-radius: 15px;
 
         @media (max-width: 400px) {
@@ -80,7 +80,7 @@
         font-weight: 500;
         font-size: 36px;
         line-height: 100%;
-        color: #FFFFFF;
+        color: $DefaultTextColor;
         transition: all 0.3s;
 
         @media (max-width: 400px) {
@@ -99,7 +99,7 @@
             font-weight: 400;
             font-size: 22px;
             line-height: 114.8%;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             font-variant: lining-nums;
 
             @media (max-width: 400px) {
@@ -125,7 +125,7 @@
         font-weight: 400;
         font-size: 22px;
         line-height: 114.8%;
-        color: #FFFFFF;
+        color: $DefaultTextColor;
         font-variant: lining-nums;
         margin-top: 8px;
 
@@ -139,7 +139,7 @@
         font-weight: 400;
         font-size: 26px;
         line-height: 114.8%;
-        color: #FFFFFF;
+        color: $DefaultTextColor;
         font-variant: lining-nums;
         margin-top: 45px;
         overflow: hidden;

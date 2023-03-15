@@ -18,7 +18,7 @@
         font-size: 60px;
         line-height: 100%;
         text-align: center;
-        color: #FBDAA8;
+        color: $PriceColor;
     }
 
     &__cards {
@@ -51,7 +51,7 @@
         overflow: hidden;
         min-height: 620px;
         z-index: 5;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
+        background: linear-gradient(180deg, rgba($DarkColor, 0) 26.97%, rgba($DarkColor, 0.510624) 46.42%, rgba($DarkColor, 0.841941) 65.56%, $DarkColor 98.26%);
         transition: all 0.3s;
 
         @media (max-width: 400px) {
@@ -83,7 +83,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
+            background: linear-gradient(180deg, rgba($DarkColor, 0) 26.97%, rgba($DarkColor, 0.510624) 46.42%, rgba($DarkColor, 0.841941) 65.56%, $DarkColor 98.26%);
             padding: 28px;
 
             @media (max-width: 400px) {
@@ -96,7 +96,7 @@
             font-weight: 500;
             font-size: 36px;
             line-height: 100%;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             margin-bottom: 25px;
             transition: all 0.3s;
 
@@ -111,7 +111,7 @@
             font-weight: 400;
             font-size: 22px;
             line-height: 114.8%;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             margin-bottom: 30px;
             transition: all 0.3s;
 
@@ -129,7 +129,7 @@
             font-size: 28px;
             line-height: 36px;
             letter-spacing: 0.02em;
-            color: #FBDAA8;
+            color: $PriceColor;
             opacity: 0.9;
             margin-bottom: 39px;
 
@@ -160,6 +160,7 @@
         }
 
         &__control {
+            
             &_link {
                 font-family: $LogoFont;
                 font-weight: 700;
@@ -167,7 +168,7 @@
                 line-height: 23px;
                 text-align: center;
                 letter-spacing: 0.02em;
-                color: #D8A65D;
+                color: $LinkColor;
                 opacity: 0.9;
                 display: flex;
                 align-items: center;
@@ -190,21 +191,19 @@
                 }
 
                 &:hover {
-                    color: darken(#D8A65D, 10%);
+                    color: darken($LinkColor, 10%);
 
                     & svg {
 
                         & path:first-child {
-                            fill: darken(#D8A65D, 10%);
+                            fill: darken($LinkColor, 10%);
                             transform: translateX(3px);
                         }
 
                         & path:last-child {
-                            stroke: darken(#D8A65D, 10%);
+                            stroke: darken($LinkColor, 10%);
                         }
                     }
-
-
                 }
             }
         }

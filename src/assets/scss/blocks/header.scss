@@ -14,7 +14,7 @@
 
     @media (max-width: 1050px) {
         position: fixed;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba($DarkColor, 0.8);
         padding-bottom: 20px;
     }
 
@@ -39,7 +39,7 @@
         padding: 40px 65px 30px;
         width: calc((740 / 1505) * 100%);
         margin-left: 40px;
-        background: rgba(0, 0, 0, 0.36);
+        background: rgba($DarkColor, 0.36);
         backdrop-filter: blur(26.5px);
         border-radius: 0px 0px 15px 15px;
 
@@ -87,7 +87,7 @@
             }
 
             & a {
-                color: #FFFFFF;
+                color: $DefaultTextColor;
                 font-family: $ContentFont;
                 font-weight: 500;
                 font-size: 22px;
@@ -110,10 +110,10 @@
                 }
 
                 &:hover {
-                    color: #D8A65D;
+                    color: $LinkColor;
 
                     &::after {
-                        border-color: #D8A65D;
+                        border-color: $LinkColor;
                         width: 100%;
                     }
                 }
@@ -135,7 +135,7 @@
 
             &:hover {
                 & svg path {
-                    fill: #D8A65D;
+                    fill: $LinkColor;
                 }
             }
         }
@@ -158,7 +158,7 @@
 
         &_phone {
             font-family: $ContentFont;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             font-weight: 500;
             font-size: 26px;
             line-height: 36px;
@@ -167,7 +167,7 @@
 
             &:hover {
                 text-decoration: underline;
-                color: #D8A65D;
+                color: $LinkColor;
             }
 
             @media (max-width: 1250px) {
@@ -191,12 +191,11 @@
                 line-height: 25px;
                 margin-top: 0;
             }
-
         }
 
         &_addr {
             font-family: $ContentFont;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             font-weight: 500;
             font-size: 20px;
             line-height: 28px;
@@ -206,7 +205,7 @@
 
             &:hover {
                 text-decoration: underline;
-                color: #D8A65D;
+                color: $LinkColor;
             }
 
             @media (max-width: 1250px) {
@@ -238,7 +237,7 @@
 
         &:hover {
             & svg rect {
-                fill: #D8A65D;
+                fill: $LinkColor;
             }
         }
 
@@ -258,11 +257,11 @@
 
     &:hover {
         & .logo__text {
-            color: #D8A65D;
+            color: $LinkColor;
         }
 
         & svg path {
-            fill: #D8A65D;
+            fill: $LinkColor;
         }
     }
 
@@ -286,13 +285,11 @@
         width: 110px;
     }
 
-
-
     &__text {
         text-transform: uppercase;
         font-size: 12px;
         font-family: $LogoFont;
-        color: rgba(#FFFFFF, 0.8);
+        color: rgba($DefaultTextColor, 0.8);
         letter-spacing: 0.175em;
         margin-top: 10px;
         transition: all 0.3s;

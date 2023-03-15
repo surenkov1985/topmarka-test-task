@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     z-index: 40;
-    background: rgba(#000000, 0);
+    background: rgba($DarkColor, 0);
     display: none;
 
     &.active {
@@ -23,7 +23,7 @@
         left: -100%;
         max-width: 450px;
         height: 100%;
-        background: #0C0C0D;
+        background: $BgColor;
         position: absolute;
     }
 
@@ -73,11 +73,11 @@
             &:hover {
                 box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
                 backdrop-filter: blur(24.5px);
-                background: #D8A65D;
+                background: $LinkColor;
             }
 
             & a {
-                color: #FFFFFF;
+                color: $DefaultTextColor;
                 font-family: $ContentFont;
                 font-weight: 500;
                 font-size: 22px;
@@ -97,7 +97,7 @@
 
         &_phone {
             font-family: $ContentFont;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             font-weight: 500;
             font-size: 26px;
             line-height: 36px;
@@ -106,14 +106,13 @@
 
             &:hover {
                 text-decoration: underline;
-                color: #D8A65D;
+                color: $LinkColor;
             }
-
         }
 
         &_addr {
             font-family: $ContentFont;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             font-weight: 500;
             font-size: 20px;
             line-height: 28px;
@@ -123,7 +122,7 @@
 
             &:hover {
                 text-decoration: underline;
-                color: #D8A65D;
+                color: $LinkColor;
             }
         }
     }
@@ -174,7 +173,7 @@
 
         &:hover {
             & svg path {
-                stroke: #D8A65D;
+                stroke: $LinkColor;
             }
         }
     }
@@ -182,11 +181,11 @@
 
 @keyframes showBg {
     from {
-        background: rgba(#000000, 0);
+        background: rgba($DarkColor, 0);
     }
 
     to {
-        background: rgba(#000000, 0.5);
+        background: rgba($DarkColor, 0.5);
     }
 }
 

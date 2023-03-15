@@ -6,31 +6,33 @@ const reviewCloseBtn = fullReview.querySelector(".review__close_btn");
 const fullReviewName = fullReview.querySelector(".review__name");
 const fullReviewAge = fullReview.querySelector(".review__age");
 const fullReviewText = fullReview.querySelector(".review__text");
-const fullReviewRating = fullReview.querySelector(".review__rating")
+const fullReviewRating = fullReview.querySelector(".review__rating");
 
+// открываем окно с отзывом
 
 for (let card of reviews) {
 	card.addEventListener("click", function (e) {
-		const name = card.querySelector(".reviews__name").textContent
+		const name = card.querySelector(".reviews__name").textContent;
 		const age = card.querySelector(".reviews__age").textContent;
 		const text = card.querySelector(".reviews__text").textContent;
 		const rating = card.querySelector(".reviews__rating").innerHTML;
 		console.log(rating);
 
 		fullReviewName.innerHTML = name;
-		fullReviewAge.innerHTML = age
+		fullReviewAge.innerHTML = age;
 		fullReviewText.innerHTML = text;
 		fullReviewRating.innerHTML = rating;
 
-		fullReview.classList.add("active")
+		fullReview.classList.add("active");
 		document.body.style.overflow = "hidden";
 	});
 }
-reviewCloseBtn.addEventListener("click", function(e) {
-	
-		closeReview()
-	
-})
+
+// закрываем окно с отзыва
+
+reviewCloseBtn.addEventListener("click", function (e) {
+	closeReview();
+});
 
 fullReview.addEventListener("click", function (e) {
 	if (e.target === fullReview) {
@@ -46,6 +48,8 @@ function closeReview() {
 	fullReviewRating.innerHTML = "";
 	document.body.style.overflow = "inherit";
 }
+
+// слайдер отзывов
 
 const reviewsSlider = new Swiper(".reviews__content", {
 	loop: true,

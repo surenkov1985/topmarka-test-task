@@ -29,9 +29,9 @@
         min-height: 490px;
         z-index: 5;
         padding: 2px;
-        background: #D8A65D;
+        background: $LinkColor;
         background-position: 90% 90%;
-        background: linear-gradient(180deg, rgba(#D8A65D, 0) 88%, rgba(#D8A65D, 1) 100%);
+        background: linear-gradient(180deg, rgba($LinkColor, 0) 88%, rgba($LinkColor, 1) 100%);
         transition: all 0.5s;
 
         @media (max-width: 550px) {
@@ -49,7 +49,7 @@
 
 
         &:hover {
-            background: #D8A65D;
+            background: $LinkColor;
             animation: gradient 0.3s 1 forwards;
         }
 
@@ -72,7 +72,7 @@
             justify-content: space-between;
             align-items: flex-end;
             border-radius: 15px;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.97%, rgba(0, 0, 0, 0.510624) 46.42%, rgba(0, 0, 0, 0.841941) 65.56%, #000000 98.26%);
+            background: linear-gradient(180deg, rgba($DarkColor, 0) 26.97%, rgba($DarkColor, 0.510624) 46.42%, rgba($DarkColor, 0.841941) 65.56%, $DarkColor 98.26%);
             padding: 50px 37px 27px 22px;
 
             @media (max-width: 550px) {
@@ -85,7 +85,7 @@
             font-weight: 500;
             font-size: 36px;
             line-height: 100%;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             margin-bottom: 25px;
             transition: all 0.3s;
 
@@ -99,7 +99,7 @@
             font-weight: 400;
             font-size: 22px;
             line-height: 114.8%;
-            color: #FFFFFF;
+            color: $DefaultTextColor;
             margin-bottom: 30px;
             transition: all 0.3s;
             font-variant: lining-nums;
@@ -117,7 +117,7 @@
             font-size: 28px;
             line-height: 36px;
             letter-spacing: 0.02em;
-            color: #FBDAA8;
+            color: $PriceColor;
             opacity: 0.9;
             margin-bottom: 39px;
 
@@ -133,6 +133,7 @@
         }
 
         &__control {
+
             &_link {
                 font-family: $LogoFont;
                 font-weight: 700;
@@ -140,7 +141,7 @@
                 line-height: 23px;
                 text-align: center;
                 letter-spacing: 0.02em;
-                color: #D8A65D;
+                color: $LinkColor;
                 opacity: 0.9;
                 display: flex;
                 align-items: center;
@@ -155,21 +156,19 @@
                 }
 
                 &:hover {
-                    color: darken(#D8A65D, 10%);
+                    color: darken($LinkColor, 10%);
 
                     & svg {
 
                         & path:first-child {
-                            fill: darken(#D8A65D, 10%);
+                            fill: darken($LinkColor, 10%);
                             transform: translateX(3px);
                         }
 
                         & path:last-child {
-                            stroke: darken(#D8A65D, 10%);
+                            stroke: darken($LinkColor, 10%);
                         }
                     }
-
-
                 }
             }
         }

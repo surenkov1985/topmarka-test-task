@@ -31,11 +31,39 @@
         font-size: 20px;
         line-height: 28px;
         font-variant: lining-nums;
-        color: rgba(#FFFFFF, 0.5);
+        color: rgba($DefaultTextColor, 0.5);
 
         @media (max-width: 400px) {
             font-size: 16px;
             line-height: 20px;
+        }
+    }
+
+    & .scroll-top-btn {
+        position: fixed;
+        bottom: 50px;
+        left: 50px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: $LinkColor;
+        z-index: 30;
+
+        &.active {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            left: 33px;
+        }
+
+        @media (max-width: 400px) {
+            bottom: 30px;
+            left: 20px;
         }
     }
 }

@@ -6,6 +6,8 @@ ymaps.ready(function () {
 	});
 	map.behaviors.disable("scrollZoom");
 
+	// своя метка
+
 	let Placemark = new ymaps.Placemark(
 		[56.305625131939365, 43.991352285157454],
 		{
@@ -21,6 +23,8 @@ ymaps.ready(function () {
 	map.geoObjects.add(Placemark);
 
 	const centerCoord = map.getGlobalPixelCenter();
+
+	// смещаем центр карты
 
 	if (window.innerWidth > 1200) {
 		centerCoord[0] -= 150;
